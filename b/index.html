@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trent C. Hilding PLC | Specialized Michigan Agricultural & Business Law</title>
+    <meta name="description" content="Protect your legacy with Trent C. Hilding PLC. Expert legal counsel for Michigan farm succession, agribusiness taxation, and rural real estate. Serving Edmore and Mid-Michigan.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#0B0F15',      // Very deep slate/black
+                            surface: '#151C26', // Elevated slate
+                            border: '#2A3648',  // Subtle borders
+                            accent: '#F59E0B',  // Amber 500 (Harvest/Premium)
+                            accentHover: '#D97706', // Amber 600
+                            text: '#F8FAFC',    // Slate 50
+                            muted: '#94A3B8',   // Slate 400
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-up': 'fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-brand-bg text-brand-text font-sans antialiased selection:bg-brand-accent selection:text-white flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <header class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-brand-bg/80 border-b border-brand-border" id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24 transition-all duration-300" id="navbar-container">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 group">
+                    <div class="w-10 h-10 bg-brand-surface border border-brand-border rounded-lg flex items-center justify-center group-hover:border-brand-accent transition-colors">
+                        <span class="font-display font-bold text-xl text-brand-text">TH</span>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-bold text-lg leading-tight tracking-tight">Trent C. Hilding</span>
+                        <span class="text-xs text-brand-accent font-medium tracking-widest uppercase">PLC</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#approach" class="text-sm font-medium text-brand-muted hover:text-brand-text transition-colors nav-link">Approach</a>
+                    <a href="#services" class="text-sm font-medium text-brand-muted hover:text-brand-text transition-colors nav-link">Services</a>
+                    <a href="#contact" class="text-sm font-medium text-brand-muted hover:text-brand-text transition-colors nav-link">Contact</a>
+                </nav>
+
+                <!-- CTA -->
+                <div class="hidden md:block">
+                    <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium bg-brand-accent text-white rounded-full hover:bg-brand-accentHover transition-all transform hover:scale-105 hover:shadow-[0_0_20px_rgba(245,158,11,0.3)] cta-action">
+                        Consultation
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-brand-text focus:outline-none p-2 rounded-lg bg-brand-surface border border-brand-border hover:bg-brand-border transition-colors">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-surface border-b border-brand-border absolute w-full">
+            <div class="px-6 py-4 flex flex-col gap-4">
+                <a href="#approach" class="text-base font-medium text-brand-muted hover:text-brand-text">Approach</a>
+                <a href="#services" class="text-base font-medium text-brand-muted hover:text-brand-text">Services</a>
+                <a href="#contact" class="text-base font-medium text-brand-muted hover:text-brand-text">Contact</a>
+                <a href="#contact" class="inline-flex items-center justify-center px-6 py-3 text-sm font-medium bg-brand-accent text-white rounded-lg text-center cta-action">
+                    Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+            <!-- Background Elements -->
+            <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-accent/5 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+                <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Text Content -->
+                    <div class="lg:col-span-7 animate-fade-up">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-surface border border-brand-border mb-8">
+                            <span class="w-2 h-2 rounded-full bg-brand-accent animate-pulse"></span>
+                            <span class="text-xs font-medium text-brand-muted tracking-wide uppercase">The Farmer's Advocate</span>
+                        </div>
+                        
+                        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-display font-bold leading-[1.1] tracking-tight mb-8">
+                            Securing the future of <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-[#FCD34D]">Michigan Agriculture.</span>
+                        </h1>
+                        
+                        <p class="text-lg sm:text-xl text-brand-muted max-w-2xl mb-10 leading-relaxed">
+                            Specialized legal counsel for multi-generational farm owners and agribusinesses. We navigate succession, taxation, and real estate with "dirt-under-the-fingernails" expertise.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <a href="#contact" id="cta-button" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium bg-brand-text text-brand-bg rounded-full hover:bg-white transition-all transform hover:scale-105 cta-action group">
+                                Protect Your Legacy
+                                <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                            <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-medium bg-brand-surface border border-brand-border text-brand-text rounded-full hover:bg-brand-border hover:text-white transition-all cta-action">
+                                View Services
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Visual Elements -->
+                    <div class="lg:col-span-5 relative hidden lg:block animate-fade-up" style="animation-delay: 0.2s;">
+                        <div class="relative w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-brand-border bg-brand-surface p-2 shadow-2xl shadow-black/50">
+                            <!-- Abstract Ag-Tech Graphic -->
+                            <div class="absolute inset-2 rounded-[2rem] bg-gradient-to-br from-brand-surface to-[#1E293B] overflow-hidden">
+                                <!-- Topographic overlay -->
+                                <div class="absolute inset-0 opacity-20 topo-bg" style="background-image: radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0); background-size: 24px 24px;"></div>
+                                
+                                <div class="absolute bottom-10 left-10 right-10 bg-brand-bg/80 backdrop-blur-md border border-brand-border rounded-2xl p-6 transform hover:-translate-y-2 transition-transform duration-500">
+                                    <div class="flex items-center justify-between mb-4">
+                                        <div class="w-12 h-12 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent">
+                                            <i class="fa-solid fa-scale-balanced text-xl"></i>
+                                        </div>
+                                        <span class="text-xs font-medium px-2 py-1 rounded-md bg-brand-surface border border-brand-border">Est. 20+ Years</span>
+                                    </div>
+                                    <h3 class="font-display font-bold text-xl mb-1">Mid-Michigan Based</h3>
+                                    <p class="text-sm text-brand-muted">Serving Montcalm, Isabella & Gratiot Counties</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Badges -->
+                        <div class="absolute -right-6 top-1/4 bg-brand-surface border border-brand-border px-6 py-4 rounded-2xl shadow-xl animate-float">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-wheat-awn text-brand-accent text-xl"></i>
+                                <div>
+                                    <p class="text-xs text-brand-muted">Specialization</p>
+                                    <p class="font-display font-bold text-sm">Farm Succession</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The USP / Approach Section -->
+        <section id="approach" class="py-24 bg-brand-bg relative z-10 border-t border-brand-border">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+                <div class="mb-16 max-w-3xl">
+                    <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Not a general practice.<br><span class="text-brand-muted">A dedicated ag-law authority.</span></h2>
+                    <p class="text-lg text-brand-muted">Unlike urban corporate firms, we understand the intrinsic value of your land and the unique operational complexities of agribusiness.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 lg:gap-12 relative">
+                    <!-- Card 1 -->
+                    <div class="bg-brand-surface border border-brand-border rounded-3xl p-10 bento-card relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-bg border border-brand-border flex items-center justify-center mb-8 icon-container transition-transform duration-300">
+                            <i class="fa-solid fa-users text-2xl text-brand-text"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-4">Fair vs. Equal Paradigm</h3>
+                        <p class="text-brand-muted leading-relaxed">
+                            Passing down a farm isn't as simple as dividing assets equally among heirs. We expertly navigate the delicate balance of compensating off-farm heirs without liquidating the operation for the farming heir.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 (Offset) -->
+                    <div class="bg-[#1C2431] border border-brand-border rounded-3xl p-10 md:mt-12 bento-card shadow-2xl relative z-10">
+                        <div class="w-14 h-14 rounded-xl bg-brand-bg border border-brand-border flex items-center justify-center mb-8 icon-container transition-transform duration-300">
+                            <i class="fa-solid fa-seedling text-2xl text-brand-accent"></i>
+                        </div>
+                        <h3 class="text-2xl font-display font-bold mb-4">Farm Bureau Deep Ties</h3>
+                        <p class="text-brand-muted leading-relaxed">
+                            Our established relationships and deep involvement with the Michigan Farm Bureau mean we are constantly at the forefront of policy changes affecting Mid-Michigan agriculture.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section (SaaS Bento Grid) -->
+        <section id="services" class="py-24 relative overflow-hidden bg-[#0F151E]">
+            <!-- Background Glow -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[600px] bg-brand-surface/20 blur-[120px] rounded-full pointer-events-none"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+                <div class="text-center max-w-2xl mx-auto mb-16">
+                    <h2 class="text-3xl md:text-4xl font-display font-bold mb-4">Specialized Legal Practice Areas</h2>
+                    <p class="text-brand-muted">Comprehensive counsel designed specifically to protect the assets, land, and operational continuity of Michigan's rural communities.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Service 1: Large Span -->
+                    <div class="lg:col-span-2 bg-brand-surface border border-brand-border rounded-3xl p-8 bento-card group">
+                        <div class="flex flex-col h-full justify-between">
+                            <div>
+                                <i class="fa-solid fa-tractor text-3xl text-brand-accent mb-6 group-hover:scale-110 transition-transform origin-left"></i>
+                                <h3 class="text-2xl font-display font-bold mb-3">Farm Succession Planning Michigan</h3>
+                                <p class="text-brand-muted mb-6">Structuring multi-generational transitions to ensure your agribusiness remains viable, minimizing tax liabilities while respecting the familial legacy.</p>
+                            </div>
+                            <ul class="space-y-2">
+                                <li class="flex items-center gap-3 text-sm text-brand-text"><i class="fa-solid fa-check text-brand-accent"></i> LLC & Trust Formation</li>
+                                <li class="flex items-center gap-3 text-sm text-brand-text"><i class="fa-solid fa-check text-brand-accent"></i> Buy-Sell Agreements</li>
+                                <li class="flex items-center gap-3 text-sm text-brand-text"><i class="fa-solid fa-check text-brand-accent"></i> Gift Tax Mitigation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Service 2: Regular -->
+                    <div class="bg-brand-surface border border-brand-border rounded-3xl p-8 bento-card group">
+                        <i class="fa-solid fa-leaf text-3xl text-brand-text mb-6 group-hover:text-brand-accent transition-colors"></i>
+                        <h3 class="text-xl font-display font-bold mb-3">PA 116 Farmland Preservation</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">
+                            Expertise in PA 116 enrollment, compliance, and withdrawal procedures, ensuring your agricultural property rights are maximally preserved and utilized.
+                        </p>
+                    </div>
+
+                    <!-- Service 3: Regular -->
+                    <div class="bg-brand-surface border border-brand-border rounded-3xl p-8 bento-card group">
+                        <i class="fa-solid fa-file-contract text-3xl text-brand-text mb-6 group-hover:text-brand-accent transition-colors"></i>
+                        <h3 class="text-xl font-display font-bold mb-3">Estate Planning for Farmers</h3>
+                        <p class="text-brand-muted text-sm leading-relaxed">
+                            Robust wills, trusts, and power of attorney directives designed around the unique illiquidity challenges of farm-based wealth.
+                        </p>
+                    </div>
+
+                    <!-- Service 4: Large Span -->
+                    <div class="lg:col-span-2 bg-gradient-to-br from-brand-surface to-brand-bg border border-brand-border rounded-3xl p-8 bento-card group relative overflow-hidden">
+                        <div class="absolute right-0 bottom-0 opacity-5 w-48 h-48 translate-x-8 translate-y-8">
+                            <i class="fa-solid fa-map-location-dot text-[12rem]"></i>
+                        </div>
+                        <div class="relative z-10 flex flex-col h-full justify-between">
+                            <div>
+                                <i class="fa-solid fa-map-location-dot text-3xl text-brand-accent mb-6 group-hover:scale-110 transition-transform origin-left"></i>
+                                <h3 class="text-2xl font-display font-bold mb-3">Agribusiness Lawyer Edmore MI & Real Estate</h3>
+                                <p class="text-brand-muted mb-6 max-w-lg">Navigating complex zoning laws, riparian rights, land acquisitions, and renewable energy (solar/wind) leases that target rural Michigan landowners.</p>
+                            </div>
+                            <a href="#contact" class="inline-flex items-center text-sm font-semibold text-brand-accent group-hover:text-white transition-colors cta-action">
+                                Discuss Real Estate Counsel <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA Section -->
+        <section id="contact" class="py-24 relative bg-brand-bg border-t border-brand-border">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8 relative">
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Info -->
+                    <div>
+                        <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">Ready to secure your farming legacy?</h2>
+                        <p class="text-lg text-brand-muted mb-10">We invite you to reach out for a consultation. Let's discuss your operation, your goals, and how we can protect your family's hard work for generations to come.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-location-dot text-brand-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Office Location</h4>
+                                    <p class="text-brand-muted">6824 E Lake Montcalm Rd<br>Edmore, MI 48829</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 rounded-full bg-brand-surface border border-brand-border flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-phone text-brand-accent"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-white mb-1">Contact Us</h4>
+                                    <p class="text-brand-muted">Available by appointment.<br>Reach out via the form to schedule.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="bg-brand-surface border border-brand-border rounded-[2rem] p-8 md:p-10 shadow-2xl relative">
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-brand-accent/20 blur-2xl rounded-full"></div>
+                        <h3 class="text-2xl font-display font-bold mb-6">Request a Consultation</h3>
+                        
+                        <form id="contact-form" class="space-y-4 relative z-10" onsubmit="event.preventDefault();">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-2">
+                                    <label for="firstName" class="text-sm font-medium text-brand-muted">First Name</label>
+                                    <input type="text" id="firstName" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all" required>
+                                </div>
+                                <div class="space-y-2">
+                                    <label for="lastName" class="text-sm font-medium text-brand-muted">Last Name</label>
+                                    <input type="text" id="lastName" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all" required>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label for="email" class="text-sm font-medium text-brand-muted">Email Address</label>
+                                <input type="email" id="email" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all" required>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label for="message" class="text-sm font-medium text-brand-muted">How can we help?</label>
+                                <textarea id="message" rows="4" class="w-full bg-brand-bg border border-brand-border rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-accent focus:ring-1 focus:ring-brand-accent transition-all resize-none" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-brand-accent text-white font-medium
